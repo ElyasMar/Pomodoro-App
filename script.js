@@ -2,6 +2,28 @@ const buttons1 = document.querySelectorAll(".btn");
 const timer = document.querySelector("#timer");
 const buttons2 = document.querySelectorAll("#bottom-btns");
 const timerContainer = document.querySelector("#timer-container")
+const minDisplay = document.querySelector(".minutes")
+const secDisplay = document.querySelector(".seconds")
+
+
+let sMin = 25;
+let time = sMin * 60;
+
+function updateTimer() {
+  let min = Math.floor(time / 60);
+  let sec = time % 60;
+  sec = sec < 10 ? '0' + sec : sec;
+
+  minDisplay.textContent = min;
+  secDisplay.textContent = sec;
+
+  time--;
+  if (time < 0) clearInterval(countdown);
+}
+
+buttons2.forEach((button) => {
+    button.addEventListener("click", updateTimer)
+})
 
 
 
