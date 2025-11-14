@@ -1,26 +1,74 @@
-<<<<<<< HEAD
-=======
-#timer-container {
-  border-style:none;
-  background-color: hsla(197, 5%, 74%, 0.371);
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  width: 50%;
- margin: 0;
- 
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#btns{
+h3 {
+  text-align: center;
+  font-size: 50px;
+}
+
+#timer {
+  color: white;
+  font-size: 8.5rem;
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#container {
+  padding: 100px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#timer-container {
+  border-style:none;
+  border-radius: 10px;
+  background-color: hsla(197, 5%, 74%, 0.371);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 10px;
+}
+
+#btns {
     display: flex;          /* Arrange buttons in a row */
     justify-content: center; /* Center buttons horizontally */
     gap: 10px;               /* Space between buttons */
     margin-bottom: 20px; 
     border: none;
-    padding: 10px;
+    padding:20px 0 0;
     margin: 10px;
 }
 
->>>>>>> af436f0800d5df75e54625673ae94e003e5962bc
+#bottom-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px; 
+  border: none;
+  padding: 0 0 20px;
+  margin: 10px;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+

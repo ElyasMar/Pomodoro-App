@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Comfortaa:wght@300..700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h3> Pomofocus </h3>
-    <hr>
-    <div id="timer-container" >
+    <div id="container">
+        <div id="timer-container" >
         <div id="btns">
-         <button class="btn pomodoro" data-color="#FF1A3C"> Pomodoro </button>
-         <button class="btn short-break" data-color="#45E9FF">short Break </button>
-         <button class="btn long-break" data-color="#3292FA"> Long break  </button>
+         <button class="btn active pomodoro" data-color="#FF1A3C" data-=""> Pomodoro </button>
+         <button class="btn active short-break" data-color="#1CBBE8">short Break </button>
+         <button class="btn active long-break" data-color="#3292FA"> Long break  </button>
         </div>
 
          <div id="timer" >
-            <span class="minutes">mm:</span>
-            <span class="seconds">ss</span>
+            <span class="time">mm:</span>
          </div>
          <div id="bottom-btns">
-             <button class="btn1">Start</button>
-             <button class="btn2">Pause</button>
-             <button class="btn3">Reset</button>
+             <button class="btn btn1">Start</button>
+             <button class="btn btn2">Pause</button>
+             <button class="btn btn3">Reset</button>
          </div>
          
     </div>
+    </div>
+    
     
    
 </body>

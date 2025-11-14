@@ -1,9 +1,9 @@
 const buttons1 = document.querySelectorAll(".btn");
 const timer = document.querySelector("#timer");
-const buttons2 = document.querySelectorAll("#bottom-btns");
+const buttons2 = document.querySelectorAll("#bottom-btns .btn");
 const timerContainer = document.querySelector("#timer-container")
-const minDisplay = document.querySelector(".minutes")
-const secDisplay = document.querySelector(".seconds")
+const timerDisplay = document.querySelector(".time")
+const activeButton = document.querySelectorAll(".active")
 
 
 let sMin = 25;
@@ -14,8 +14,8 @@ function updateTimer() {
   let sec = time % 60;
   sec = sec < 10 ? '0' + sec : sec;
 
-  minDisplay.textContent = min;
-  secDisplay.textContent = sec;
+  
+  timerDisplay.textContent = `${min}:${sec}`
 
   time--;
   if (time < 0) clearInterval(countdown);
@@ -26,6 +26,9 @@ buttons2.forEach((button) => {
 })
 
 
+
+let defaultColor = document.body.style.backgroundColor = "#FF1A3C"
+let defaultTime = updateTimer()
 
 buttons1.forEach((button) => {
     button.addEventListener("click", () => {
@@ -39,8 +42,7 @@ buttons1.forEach((button) => {
         const grayishG = Math.floor((g + 127) / 2);
         const grayishB = Math.floor((b + 127) / 2);
 
-        timerContainer.style.backgroundColor = `rgba(${grayishR}, ${grayishG}, ${grayishB}, 0.4)`;
-        timerContainer.style.backdropFilter = `blur(10px)`;
+        
         document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
     })
 })
