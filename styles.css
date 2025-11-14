@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+#timer-container {
+  border-style:none;
+  background-color: hsla(197, 5%, 74%, 0.371);
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 50%;
+ margin: 0;
+ 
+  
+}
+
+#btns{
+    display: flex;          /* Arrange buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px;               /* Space between buttons */
+    margin-bottom: 20px; 
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+>>>>>>> af436f0800d5df75e54625673ae94e003e5962bc
