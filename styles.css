@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
-h3 {
-  text-align: center;
+#header {
+  display: flex;
+  text-align:left;
+  padding: 20px 0 0 7rem;
   font-size: 50px;
+  color: white;
+  gap: 5px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 50px;
+  color: white;
 }
 
 #timer {

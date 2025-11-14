@@ -47,6 +47,7 @@ resetButton.addEventListener("click", () => {
         clearInterval(countdown);
         countdown = null;
     }
+    
     time = sMin * 60;
 
     let min = Math.floor(time / 60);
@@ -68,11 +69,6 @@ buttons1.forEach((button) => {
         const r = parseInt(hex.substr(1,2), 16);
         const g = parseInt(hex.substr(3,2), 16);
         const b = parseInt(hex.substr(5,2), 16);
-
-        const grayishR = Math.floor((r + 127) / 2);
-        const grayishG = Math.floor((g + 127) / 2);
-        const grayishB = Math.floor((b + 127) / 2);
-
         
         document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b})`;
     })

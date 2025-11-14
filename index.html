@@ -11,7 +11,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3> Pomofocus </h3>
+    <div id="header">
+        <svg width="50" height="50" viewBox="0 0 50 50">
+
+        <defs>
+        <mask id="checkMask">
+
+        <rect x="0" y="0" width="50" height="50" fill="white" />
+        <path d="M17 27 L24 34 L37 19"
+            stroke="black"
+            stroke-width="6"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </mask>
+        </defs>
+
+
+        <circle cx="27" cy="27" r="20" fill="white" mask="url(#checkMask)"/>
+        </svg>
+
+        <h3> Pomofocus </h3>
+    </div>
+    
     <div id="container">
         <div id="timer-container" >
         <div id="btns">
