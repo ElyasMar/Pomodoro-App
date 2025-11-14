@@ -37,6 +37,7 @@ h3 {
 }
 
 #timer-container {
+  padding: 10px 20px;
   border-style:none;
   border-radius: 10px;
   background-color: hsla(197, 5%, 74%, 0.371);
@@ -70,13 +71,14 @@ h3 {
 .btn {
   border: none;
   background-color: inherit;
+  border-radius: 5px;
   padding: 5px 20px;
   font-size: 16px;
   cursor: pointer;
   color: white;
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   font-size: 20px;
 }
