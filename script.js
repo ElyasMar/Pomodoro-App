@@ -1,13 +1,17 @@
 const buttons1 = document.querySelectorAll(".btn");
 const timer = document.querySelector("#timer");
 const buttons2 = document.querySelectorAll("#bottom-btns .btn");
-const timerContainer = document.querySelector("#timer-container")
-const timerDisplay = document.querySelector(".time")
-const activeButton = document.querySelectorAll(".active")
+const timerContainer = document.querySelector("#timer-container");
+const timerDisplay = document.querySelector(".time");
+const activeButton = document.querySelectorAll(".active");
+const startButton = document.querySelector(".btn1");
+const pauseButton = document.querySelector(".btn2");
+const resetButton = document.querySelector(".btn3");
 
 
 let sMin = 25;
 let time = sMin * 60;
+let countdown = null;
 
 function updateTimer() {
   let min = Math.floor(time / 60);
@@ -18,12 +22,39 @@ function updateTimer() {
   timerDisplay.textContent = `${min}:${sec}`
 
   time--;
-  if (time < 0) clearInterval(countdown);
+  if (time < 0) {
+    clearInterval(countdown);
+    countdown = null;
+  }
 }
 
-buttons2.forEach((button) => {
-    button.addEventListener("click", updateTimer)
+
+startButton.addEventListener("click", () => {
+if (countdown !== null) return;
+
+countdown = setInterval(updateTimer, 1000);
+});
+
+pauseButton.addEventListener("click", () => {
+    if (countdown !== null) {
+    clearInterval(countdown);
+    countdown = null;
+  }
 })
+
+resetButton.addEventListener("click", () => {
+    if (countdown !== null) {
+        clearInterval(countdown);
+        countdown = null;
+    }
+    time = sMin * 60;
+
+    let min = Math.floor(time / 60);
+    let sec = time % 60;
+    sec = sec < 10 ? '0' + sec : sec;
+    timerDisplay.textContent = `${min}:${sec}`;
+})
+
 
 
 

@@ -72,3 +72,32 @@ h3 {
   font-size: 20px;
 }
 
+#bottom-btns {
+  gap: 25px;
+}
+
+.b-btn {
+  background-color: rgb(238, 237, 237);
+  color: black;
+  font-size: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px rgb(195, 184, 184);
+  transition: all 0.1s ease;
+}
+
+.b-btn:hover {
+  background: #ffffff;
+}
+
+.b-btn:active {
+  top: 5px;
+  box-shadow: 0px 0px 0px rgb(195, 184, 184);
+}
